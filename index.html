@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felix Abimana Urumenesha | Technical Memos</title>
+  <style>
+    :root {
+      --sys-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sys-font);
+      font-size: 18px;
+      line-height: 1.8;
+      color: #1a1a1a;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Sticky Top Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e5e5e5;
+      padding: 12px 24px;
+    }
+    .header-inner {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand { font-size: 15px; font-weight: 800; color: #000; }
+    .brand-sub { font-size: 11px; color: #666; font-weight: 500; display: block; }
+    .jump-nav { display: flex; gap: 8px; }
+    .jump-btn {
+      background: #f3f3f3;
+      border: 1px solid #e5e5e5;
+      color: #333;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .jump-btn:hover, .jump-btn.active {
+      background: #000;
+      color: #fff;
+      border-color: #000;
+    }
+    .top-links a {
+      color: #555;
+      text-decoration: underline;
+      font-size: 12px;
+      font-weight: 500;
+      margin-left: 10px;
+    }
+    /* Main Content */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    article {
+      padding-bottom: 60px;
+      margin-bottom: 60px;
+      border-bottom: 1px solid #eee;
+    }
+    .kicker {
+      font-size: 12px;
+      font-family: monospace;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      margin: 0 0 16px;
+      color: #000;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 40px 0 16px;
+      color: #000;
+    }
+    .lead {
+      font-size: 20px;
+      font-weight: 500;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    p { margin: 0 0 20px; }
+    /* Picture Slots in Middle */
+    .picture-slot {
+      margin: 40px 0;
+      padding: 16px;
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .picture-slot img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      max-height: 380px;
+      object-contain: contain;
+    }
+    .picture-caption {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    .picture-placeholder {
+      border: 2px dashed #ccc;
+      padding: 32px 16px;
+      border-radius: 12px;
+      background: #fafafa;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .quote-box {
+      border-left: 4px solid #000;
+      background: #f8f8f8;
+      padding: 18px;
+      margin: 30px 0;
+      font-style: italic;
+      font-weight: 500;
+    }
+    /* Footer */
+    footer {
+      border-top: 1px solid #eee;
+      background: #fafafa;
+      padding: 40px 20px;
+      font-size: 13px;
+      color: #666;
+    }
+    .footer-inner {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-links a {
+      color: #000;
+      font-weight: 600;
+      text-decoration: underline;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Top Header with Headline Jump Buttons -->
+  <header>
+    <div class="header-inner">
+      <div>
+        <span class="brand">Felix Abimana Urumenesha</span>
+        <span class="brand-sub">EdTech & Business · Kigali, Rwanda</span>
+      </div>
+      <div class="jump-nav">
+        <a href="#article-1" class="jump-btn">1. Why Learn Coding</a>
+        <a href="#article-2" class="jump-btn">2. Problem-Solving in Robotics</a>
+      </div>
+      <div class="top-links">
+        <a href="https://aleit.tech" target="_blank">aleit.tech</a>
+        <a href="https://codekids.org.rw" target="_blank">codekids.org.rw</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ARTICLE 1 --> 
+    <article id="article-1">
+      <div class="kicker">Article 01 · Strategy & Foundational Theory</div>
+      <h1>Why Every Elementary School Child Should Learn Coding</h1>
+      <p class="lead">Syntactic acquisition in early education develops higher-order symbolic representation and systems thinking that compounds throughout lifetime cognitive growth.</p>
+      
+      <p>Early childhood education stands at an inflection point. While reading and arithmetic have long formed the dual pillars of foundational literacy, computational thinking has quietly become the third universal grammar of the modern world.</p>
+      
+      <p>When a young learner writes code, they do not simply type commands into a terminal. They engage in <strong>algorithmic decomposition</strong>: breaking monolithic problems into deterministic, repeatable, and verifiable components.</p>
+
+      <!-- PICTURE IN THE MIDDLE: Slot 1 -->
+      <div class="picture-slot">
+        <img src="/mbot2.webp" alt="Makeblock mBot2 and CyberPi educational programmable robots" onerror="this.src='/src/assets/images/mbot2_studio_white_1791792946299.jpg'">
+        <div class="picture-caption">Educational hardware interface: Makeblock mBot2 with CyberPi microcomputers deployed in primary robotics in Kigali.</div>
+      </div>
+
+      <h2>Decoupling Failure from Stigma</h2>
+      <p>Traditional examinations treat errors as a penalty. In contrast, computational environments reframe errors into pure <em>diagnostic telemetry</em>. When a script fails to execute or a motor turns left instead of right, the child immediately asks: "Where did the logic diverge?"</p>
+
+      <div class="quote-box">
+        "Robotics and coding teach children that reality is understandable, measurable, and repairable. It builds a mindset of active intervention rather than passive resignation."
+      </div>
+
+      <h2>The Golden Window (Ages 8–12)</h2>
+      <p>Between ages 8 and 12, children transition from concrete operational thinking to abstract conceptual reasoning. During this window, neuro-plasticity is at its peak: they possess both tactile manual dexterity and the symbolic imagination needed for conditional branching and loop logic.</p>
+    </article>
+
+    <!-- ARTICLE 2 -->
+    <article id="article-2" style="border-bottom: none;"> 
+      <div class="kicker">Article 02 · Applied Engineering & Problem Solving</div>
+      <h1>How Coding Develops Problem-Solving Skills in Young Learners</h1>
+      <p class="lead">Moving from screen abstraction to physical actuators grounds logic in Newtonian reality. When software pushes atoms, deep problem-solving begins.</p>
+      
+      <p>Writing software that only lives on a computer screen carries an inherent limitation: the computer simulates frictionless ideals. But when software is wired to a physical actuator—a servo motor, an ultrasonic sensor, or a microcontroller—the rules change immediately.</p>
+      
+      <!-- PICTURE IN THE MIDDLE: Slot 2 (Placeholder where you can drop any image) -->
+      <div class="picture-placeholder">
+
+        <img src="/robot1.jpg" alt="" srcset="" style="max-width: 50%; max-height: 300px; margin-top: 12px; border-radius: 8px;">
+        <p style="margin: 8px 0 0; font-size: 13px; color: #777;">Obstacle avoiding robot assembly in a grade 4 class.</p>
+      </div>
+
+      <h2>Modular Architecture & Single Responsibility</h2>
+      <p>A hallmark of mature problem-solvers is the ability to modularize. Novices attempt to solve everything in one massive monolithic block of instructions. When something breaks, they have no idea which component caused the failure.</p>
+      <p>Through structured robotics challenges—such as autonomous line-following or obstacle avoidance—learners are coached to partition their logic into single-responsibility subroutines for sensing, decision logic, and motor actuation.</p>
+
+      <h2>From Play to Sustainable Real-World Impact</h2>
+      <p>In our robotics work across partner schools in Rwanda—from grassroots workshops to FIRST LEGO League championships with teams like Hopebots—the primary transformation is the unshakeable confidence in a child's eyes when they realize they can understand a complex machine from the ground up.</p>
+    </article>
+  </main>
+
+  <!-- Footer with dynamic year -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Felix Abimana Urumenesha</strong><br>
+        <span style="font-size: 12px; color: #777;">Operating in Kigali, Rwanda · &copy; <span id="year"></span> All rights reserved.</span>
+      </div>
+      <div class="footer-links">git iniy
+        
+        <a href="https://www.aleit.tech" target="_blank">www.aleit.tech</a>
+        <a href="https://www.codekids.org.rw" target="_blank">www.codekids.org.rw</a>
+        <a href="https://www.linkedin.com/in/felix-abimana-urumenesha-9575303ba/" target="_blank">LinkedIn</a>
+        <a href="https://instagram.com/urumenesha.felix" target="_blank">@urumenesha.felix</a>
+        <a href="https://instagram.com/codekidsrw" target="_blank">@codekidsrw</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Always sets current year automatically
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
